@@ -25,5 +25,6 @@ module entry_checker(
 	input entry;
 	input [7:0] parking_capacity;
 	output enable;
-	assign enable = (entry ? (parking_capacity[0] | parking_capacity[1] | parking_capacity[2] | parking_capacity[3] | parking_capacity[4] | parking_capacity[5] | parking_capacity[6] | parking_capacity[7]) : 7'bzzzzzzz) ;
+	assign enable = (entry ? (parking_capacity[0] | parking_capacity[1] | parking_capacity[2] | parking_capacity[3] | parking_capacity[4] | parking_capacity[5] | parking_capacity[6] | parking_capacity[7]) : 1'b0) ;
+
 endmodule
