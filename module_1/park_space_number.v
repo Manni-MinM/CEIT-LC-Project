@@ -31,7 +31,7 @@ module park_space_number(
 							parking_capacity[3] == 1'b1 ? 3'b011 :
 							parking_capacity[4] == 1'b1 ? 3'b100 :
 							parking_capacity[5] == 1'b1 ? 3'b101 :
-							parking_capacity[6] == 1'b1 ? 3'b110 : 
+							parking_capacity[6] == 1'b1 ? 3'b110 :
 							parking_capacity[7] == 1'b1 ? 3'b111 : 3'bzzz) ;
 	
 endmodule
