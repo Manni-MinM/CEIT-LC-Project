@@ -27,7 +27,9 @@ module exit_park(
 	input [2:0] token;
 	input [2:0] pattern;
 	output [7:0] park_location;
-	wire Ddata[2:0] ;
+	wire [2:0] Ddata;
+	
 	decrypt DECRYPT(exit , token , pattern , Ddata) ;
 	exit_parking_lot EXIT_PARKING_LOT(Ddata , park_location) ;
+	
 endmodule
