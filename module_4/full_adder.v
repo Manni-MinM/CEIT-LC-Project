@@ -6,8 +6,8 @@
   --  *******************************************************
   --  All Rights reserved (C) 2021-2022
   --  *******************************************************
-  --  Student ID  : 
-  --  Student Name: 
+  --  Student ID  : 993154 & 9931066
+  --  Student Name: Manni Moghimi & Amirhossein Iravanimanesh
   --  Student Mail: 
   --  *******************************************************
   --  Additional Comments:
@@ -15,16 +15,21 @@
   --*/
 
 /*-----------------------------------------------------------
-  ---  Module Name: time_calculate
+  ---  Module Name: full_adder
   -----------------------------------------------------------*/
 `timescale 1 ns/1 ns
-module time_calculate(
-	time_out,
-	time_in,
-	time_total);
-	input [7:0] time_out;
-	input [7:0] time_in;
-	output [7:0] time_total;
-	wire cout ;
-	adder_subtractor ADDSUB(time_out , time_in , 1'b1 , time_total , cout) ;
+module full_adder(
+	A,
+	B,
+	cin,
+	sum,
+	cout);
+	input A ;
+	input B ;
+	input cin ;
+	output sum ;
+	output cout ;
+	
+	assign sum = A ^ B ^ cin ;
+	assign cout = (A & B) | (B & cin) | (B & cin) ;
 endmodule
