@@ -25,5 +25,5 @@ module calculate_new_capacity(
 	input [7:0] park_location;
 	input [7:0] parking_capacity;
 	output [7:0] new_capacity;
-	assign new_capacity = parking_capacity | park_location ;
+	assign new_capacity = parking_capacity ^ park_location ;
 endmodule
