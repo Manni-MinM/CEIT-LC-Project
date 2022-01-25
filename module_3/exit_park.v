@@ -30,6 +30,6 @@ module exit_park(
 	wire [2:0] Ddata;
 	
 	decrypt DECRYPT(exit , token , pattern , Ddata) ;
-	exit_parking_lot EXIT_PARKING_LOT(Ddata , park_location) ;
+	exit_parking_lot EXIT_PARKING_LOT(Ddata , exit, park_location) ;
 	
 endmodule

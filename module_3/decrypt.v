@@ -27,5 +27,5 @@ module decrypt(
 	input [2:0] token;
 	input [2:0] pattern;
 	output [2:0] park_number;
-	assign park_number = (exit ? token ^ pattern : 3'bzzz) ;
+	assign park_number = (exit ? token ^ pattern : 3'b000) ;
 endmodule
