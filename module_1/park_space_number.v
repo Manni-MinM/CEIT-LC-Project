@@ -25,13 +25,13 @@ module park_space_number(
 	input enable;
 	input [7:0] parking_capacity;
 	output [2:0] park_number;
-	assign park_number = (enable ? (parking_capacity[0] == 1'b1 ? 3'b000 :
-							parking_capacity[1] == 1'b1 ? 3'b001 :
-							parking_capacity[2] == 1'b1 ? 3'b010 :
-							parking_capacity[3] == 1'b1 ? 3'b011 :
-							parking_capacity[4] == 1'b1 ? 3'b100 :
+	assign park_number = (enable ? (parking_capacity[7] == 1'b1 ? 3'b111 :
+							parking_capacity[6] == 1'b1 ? 3'b110 :
 							parking_capacity[5] == 1'b1 ? 3'b101 :
-							parking_capacity[6] == 1'b1 ? 3'b110 : 
-							parking_capacity[7] == 1'b1 ? 3'b111 : 3'bzzz) : 3'bzzz);
+							parking_capacity[4] == 1'b1 ? 3'b100 :
+							parking_capacity[3] == 1'b1 ? 3'b011 :
+							parking_capacity[2] == 1'b1 ? 3'b010 :
+							parking_capacity[1] == 1'b1 ? 3'b001 : 
+							parking_capacity[0] == 1'b1 ? 3'b000 : 3'bzzz) : 3'bzzz);
 	
 endmodule

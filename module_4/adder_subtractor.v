@@ -18,7 +18,7 @@
   ---  Module Name: full_adder
   -----------------------------------------------------------*/
 `timescale 1 ns/1 ns
-module adder_subtractor(
+module adder_subtractor8x8(
 	A,
 	B,
 	cin,

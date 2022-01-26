@@ -34,7 +34,6 @@ module smart_parking(
 	wire [2:0] token;
 	wire [7:0] park_location;
 	wire [7:0] parking_capacity_new;
-	wire [7:0] time_total;
 	entry_park entry_park(entry, parking_capacity, park_number);
 	token_production token_production(park_number, pattern, token);
 	exit_park exit_park(exit, token, pattern, park_location);

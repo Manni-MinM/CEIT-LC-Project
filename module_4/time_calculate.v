@@ -6,8 +6,8 @@
   --  *******************************************************
   --  All Rights reserved (C) 2021-2022
   --  *******************************************************
-  --  Student ID  : 
-  --  Student Name: 
+  --  Student ID  : 9931066 & 9931054
+  --  Student Name: Amirhossein Iravanimanesh & Manni Moghimi
   --  Student Mail: 
   --  *******************************************************
   --  Additional Comments:
@@ -26,5 +26,5 @@ module time_calculate(
 	input [7:0] time_in;
 	output [7:0] time_total;
 	wire cout ;
-	adder_subtractor ADDSUB(time_out , time_in , 1'b1 , time_total , cout) ;
+	adder_subtractor8x8 ADDSUB(time_out , time_in , 1'b1 , time_total , cout) ;
 endmodule
